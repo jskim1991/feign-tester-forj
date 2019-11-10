@@ -1,0 +1,25 @@
+feign:
+  compression:
+    request:
+      enabled: true
+      mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+      min-request-size: 0
+    response:
+      enabled: true
+      useGzipDecoder: true
+
+  client:
+    config:
+      default:
+        loggerLevel: full
+        
+  hystrix:
+    enabled: true
+
+logging:
+  level:
+    org.springframework.*: DEBUG
+    com.sdg.dpd.*: DEBUG
+
+server:
+  port: 8002
